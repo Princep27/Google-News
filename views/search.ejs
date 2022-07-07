@@ -1,0 +1,26 @@
+<%- include('header')-%>
+<div class="body h-flex">
+
+    <div class="news_briefing h-flex">
+        <div id="left-" class="c-flex">
+            <h2><%=searchtitle%></h2>
+            <hr>
+            
+            <% for(var i=0; i<datasearch.length ; i++){ %>
+               <div class="l">
+                    <div class="para">
+                        <div><a href=<%= datasearch[i].url %>> <%= datasearch[i].title %> </a>
+                        <p style="font-size:13px "><%= datasearch[i].content %></p>
+                    </div>
+                        
+                    </div>
+                    <div class="image">
+                        <img src=<%= datasearch[i].urlToImage%>>
+                    </div>
+               </div>
+            <% } %>
+
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

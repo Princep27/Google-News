@@ -1,0 +1,27 @@
+<%- include('header')-%>
+<div class="body h-flex">
+
+    <div class="news_briefing h-flex">
+        <div id="left-" class="c-flex">
+            <h2><%=title%></h2>
+            <hr>
+            
+            <% for(var i=0; i<data1.length; i++){ %>
+               <div class="l">
+                    <div class="para">
+                        <div>
+                            <a href=<%= data1[i].url %>> <%= data1[i].title %> </a>
+                            <br><br>
+                            <p style="font-size:13px "><%= data1[i].content %></p>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src=<%= data1[i].urlToImage%>>
+                    </div>
+               </div>
+            <% } %>
+
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

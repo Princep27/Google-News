@@ -1,0 +1,196 @@
+<%- include('header') -%>
+    <div class="h-flex">
+        <div class="heading">
+             <h1>Your briefing</h1>
+             <h5><script> document.write(new Date().toLocaleDateString()); </script></h5>
+        </div>
+    </div>
+
+
+    <div class="body h-flex">
+        <div class="briefing h-flex">
+            <div id="left-" class="c-flex">
+                <h2><a href="/0">Top stories</a></h2>
+                
+                <% for(var i=0; i<5 ; i++){ %>
+                   <div class="l">
+                        <div class="para">
+                            <a href=<%= data1[i].url %>><%= data1[i].title %> </a>
+                        </div>
+                        <div class="image">
+                            <img src=<%= data1[i].urlToImage%>>
+                        </div>
+                   </div>
+                <% } %>
+
+            </div>
+            
+            <div id="right-" class="c-flex">
+                <h2>Picks for you</h2>
+                <hr>
+                <% for(var i=5; i<8 ; i++){ %>
+                    <div class="r">
+                         <div class="para">
+                            <a href=<%= data1[i].url %>> <%= data1[i].title %> </a>
+                         </div>
+                         <div class="image">
+                             <img src=<%= data1[i].urlToImage%>>
+                         </div>
+                    </div>
+                 <% } %>
+            </div>
+
+        </div> 
+    </div>
+
+    <div class="h-flex">
+        <div class="heading">
+            <h2>Yours Topics</h2>
+        </div>
+    </div>
+    
+    <div class="h-flex">
+        <div class="your-topics h-flex">
+                <div class="p c-flex">
+                    <h3><a href="/1">Technology</a></h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data2[i].url %>> <%= data2[i].title %> </a>
+                             </div>
+                             <div class="image">
+                                 <img src=<%= data2[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>
+
+                <div class="p c-flex">
+                    <h3><a href="/2">Sport</a></h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data3[i].url %>> <%= data3[i].title %> </a>
+                             </div>
+                             <div class="image h-flex">
+                                <img src=<%= data3[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>
+
+                <div class="p c-flex">
+                    <h3><a href="/3">Business</a></h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data4[i].url %>><%= data4[i].title %> </a>
+                             </div>
+                             <div class="image h-flex">
+                                 <img src=<%= data4[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>
+
+                <div class="p c-flex">
+                    <h3><a href="/4">Science</a></h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data5[i].url %>> <%= data5[i].title %> </a>
+                             </div>
+                             <div class="image">
+                                 <img src=<%= data5[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>
+
+                <div class="p c-flex">
+                    <h3><a href="/5">Health</a></h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data6[i].url %>> <%= data6[i].title %> </a>
+                             </div>
+                             <div class="image h-flex">
+                                 <img src=<%= data6[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>
+
+                <div class="p c-flex">
+                    <h3><a href="/6">Entertainment</a></h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data7[i].url %>> <%= data7[i].title %> </a>
+                             </div>
+                             <div class="image h-flex">
+                                 <img src=<%= data7[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>  
+        </div>
+    </div>
+
+
+    <!-- <div class="h-flex">
+        <div class="your-topics h-flex">
+                <div class="p c-flex">
+                    <h3>Science</h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data5[i].url %>> <%= data5[i].title %> </a>
+                             </div>
+                             <div class="image">
+                                 <img src=<%= data5[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>
+
+                <div class="p c-flex">
+                    <h3>Health</h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data6[i].url %>> <%= data6[i].title %> </a>
+                             </div>
+                             <div class="image h-flex">
+                                 <img src=<%= data6[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>
+
+                <div class="p c-flex">
+                    <h3>Entertainment</h3>
+                    <% for(var i=0; i<4 ; i++){ %>
+                        <hr>
+                        <div class="q h-flex">
+                             <div class="para">
+                                <a href=<%= data7[i].url %>> <%= data7[i].title %> </a>
+                             </div>
+                             <div class="image h-flex">
+                                 <img src=<%= data7[i].urlToImage%>>
+                             </div>
+                        </div>
+                     <% } %>
+                </div>
+        </div>
+    </div>   -->
+    
+<%- include("footer") -%>

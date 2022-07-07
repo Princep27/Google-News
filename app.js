@@ -62,11 +62,11 @@ app.get("/",function(req,res){
 
 
     var categories = ['','technology','sports','business','science','health','entertainment'];
-    getNews(key6,categories[0],function(topNews){
-    getNews(key6,categories[1],function(technology){
-    getNews(key6,categories[2],function(sports){
-    getNews(key6,categories[3],function(business){
-    getNews(key6,categories[4],function(science){
+    getNews(key1,categories[0],function(topNews){
+    getNews(key2,categories[1],function(technology){
+    getNews(key3,categories[2],function(sports){
+    getNews(key4,categories[3],function(business){
+    getNews(key5,categories[4],function(science){
     getNews(key6,categories[5],function(health){
         getNews(key6,categories[6],function(entertainment){
             console.log(topNews[0].title);
@@ -150,6 +150,6 @@ app.get("/",function(req,res){
 
 
 
-app.listen(3000,function(){
+app.listen(3000 || process.env.PORT,function(){
     console.log("server is running");
 });

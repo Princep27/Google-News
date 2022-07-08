@@ -80,16 +80,23 @@ nav .account img{
     width: 40px;
 }
 
-nav .down{
+.down{
     height:60px;
+    width: 83vw;
 }
 
 nav ul{
     color:white;
     display:flex;
     flex-direction: row;
-    justify-content: center;
     list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+}
+
+ul::-webkit-scrollbar{
+    display: none;
 }
 
 nav li{
@@ -160,7 +167,6 @@ nav .search{
 }
 .r img{
     width: 80px;
-    height: 80px;
     object-fit: cover;
 }
 .l img{
@@ -201,7 +207,7 @@ a:hover{
     margin:5px;
 }
 .p img{
-    width:60px;
+    width:100px;
     /* height:60px; */
     object-fit: cover;
     border-radius:15px;
@@ -286,30 +292,19 @@ nav button {
         width: 38vw;
     }
     nav li {
-        padding: 12px 17px 9px 17px;
+        padding: 12px 28px 9px 28px;
+        cursor: pointer;
     }
-    nav ul{
-        flex-wrap: wrap;
-    }
-    
-    
 }
 
 @media only screen and (max-width: 650px) {
     #left-{
         width:90%;
+        margin-bottom:34px;
     }
     #right-{
-        width:89%
-    }
-    .your-topics .p{
-        width: 75vw;
-    }
-    nav li {
-        padding: 9px 5px 9px 5px;
-    }
-    nav ul{
-        flex-wrap: wrap;
+        width:90%;
+        margin:0px;
     }
     nav p{
         padding:0px;
@@ -330,8 +325,65 @@ nav button {
     margin: 16px;
     }
 
-    .search button{
-        left: 11px;
-        top: 0px;
+    .l, .r {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .l img {
+        width: 266px;
+    }
+
+    .r img {
+        width: 244px;
+        border-radius: 14px;
+    }
+
+    .your-topics .p {
+        width: 85vw;
+    }
+
+    .h-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p img {
+        width: 265px;
+    }
+
+    .heading{
+        width:93vw;
+        padding:3px 2vw;
+    }
+
+    .heading h2{
+        padding:8px 0px;
+    }
+
+    .your-topics {
+        margin: 10px;
+        width: 100vw;
+    }
+
+    .q{
+        flex-direction: column-reverse;
+        text-align:center;
+    }
+
+    nav li {
+        padding: 12px 17px 9px 17px;
+        cursor: pointer;
+    }
+
+    .logo p {
+        font-size: 18px;
+        margin: 8px 18px;
+    }
+
+    .search button {
+        left: 8px;
+        top: -6px;
     }
 }

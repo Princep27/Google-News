@@ -10,6 +10,37 @@
 </head>
 <body >
     <nav>
+        <div class="burger">
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                                <a href="/" >Home</a>
+                                <a href="/0" >TopNews</a>
+                                <a href="/1" >Technolog</a>
+                                <a href="/2" >Sport</a>
+                                <a href="/3" >Business</a> 
+                                <a href="/4" >Science</a>
+                                <a href="/5" >Health</a>
+                                <a href="/6" >Entertainment</a>  
+            </div>
+            
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">☰</button>  
+            </div>
+            
+            <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+            }
+            </script>
+        </div>
+
+
         <div class="up">
             <div class="logo"> <p>Google News</p></div>
             <form action="/search" method="post" class="h-flex">

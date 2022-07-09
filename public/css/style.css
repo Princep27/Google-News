@@ -81,7 +81,7 @@ nav .account img{
 }
 
 .down{
-    height:60px;
+    height:43px;
     width: 83vw;
 }
 
@@ -264,8 +264,68 @@ nav button {
     border-radius: 20px;
 }
 
-/*----------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+  
+  .burger{
+    position: absolute;
+    display:none;
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 7px 0px 0px 6px;
+    border: none;
+    position:fixed;
+}
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
 
+/*----------------------------------------------------------*/
+@media only screen and (max-width: 1164px) {
+    .logo p{
+        font-size:18px;
+        margin-top:10px;
+        text-align: center;
+    }
+}
 
 @media only screen and (max-width: 980px) {
     #left-{
@@ -278,9 +338,10 @@ nav button {
     nav{
         overflow:hidden;
     }
-    .logo p{
-        font-size: 21px;
-        margin-top: 11px;
+    .logo p {
+        font-size: 16px;
+        text-align: center;
+        margin: 13px 0px 3px 3vw;
     }
     .briefing{
         width:100%;
@@ -294,6 +355,20 @@ nav button {
     nav li {
         padding: 12px 28px 9px 28px;
         cursor: pointer;
+    }
+
+    .up{
+        padding-bottom:8px;
+    }
+    .down{
+        display: none;
+    }
+    .burger{
+        display:contents;
+        position:absolute;
+    }
+    #main{
+        position: absolute;
     }
 }
 
@@ -316,8 +391,8 @@ nav button {
         height: 69px;
     }
 
-    nav .search{
-            width: 97%;
+    nav .search {
+        width: 84%;
     }
 
     .search input{
@@ -378,12 +453,16 @@ nav button {
     }
 
     .logo p {
-        font-size: 18px;
-        margin: 8px 18px;
+        font-size: 12px;
+        margin: 8px 0px 0px 48px;
     }
 
     .search button {
-        left: 8px;
-        top: -6px;
+        left: 5px;
+        top: -5px;
+    }
+
+    .openbtn{
+        margin-top: 3px;
     }
 }
